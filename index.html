@@ -152,7 +152,7 @@
                 { question: 'If you (subtract) _____ a larger number from a smaller one, the result is negative.', answer: 'subtract' }
               ]
             ],
-            'mixed-tense-questions': [
+            'present-perfect': [
               { question: 'I (never/be) _____ to Japan, but I hope to visit someday.', answer: 'have never been' },
               { question: 'She (finish) _____ her homework before dinner last night.', answer: 'finished' },
               { question: 'They (recently/move) _____ to a new house in a different city.', answer: 'have recently moved' },
@@ -174,7 +174,7 @@
               { question: 'We (not/have) _____ a family vacation in a long time.', answer: 'have not had' },
               { question: 'He (learn) _____ how to swim when he was a child.', answer: 'learned' }
             ]
-    }; 
+        }; 
         const rulesData = {
             'comparative-adjectives': `
                 <h3>Rules for Comparative and Superlative Adjectives</h3>
@@ -214,7 +214,7 @@
 
         function showQuestion() {
             const question = gameData[currentGame][currentQuestion];
-            document.getElementById('progress').textContent = `Question ${currentQuestion + 1} of 20`;
+            document.getElementById('progress').textContent = `Question ${currentQuestion + 1} of ${gameData[currentGame].length}`;
             document.getElementById('question').textContent = question.question;
             document.getElementById('answer-input').value = '';
             document.getElementById('feedback').style.display = 'none';
@@ -267,7 +267,5 @@
             document.getElementById('rules-popup').style.display = 'none';
         }
     </script>
-</body>
-</html>
 </body>
 </html>
